@@ -48,10 +48,10 @@ To update database connection, update the ormconfig.json file.
 ### Enviroment variables
 Set NODE_ENV environment variable to development or production so ConfigModule can load the right .env file.
 
-Create a development.env files with the following variables:
-GOOGLE_CLIENT_ID={{your google client id}}
-GOOGLE_CLIENT_SECRET={{your google client secret}}
-JWT_SECRET={{your jwt secret}}
-EXPIRES_IN=3600
+Create a development.env files with the following variables:  
+GOOGLE_CLIENT_ID={{your google client id}}  
+GOOGLE_CLIENT_SECRET={{your google client secret}}  
+JWT_SECRET={{your jwt secret}}  
+EXPIRES_IN=3600  
 
 For more instruction on on enviroment variables, please see this [Configuration](https://docs.nestjs.com/techniques/configuration) technique.
