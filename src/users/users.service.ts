@@ -36,7 +36,8 @@ export class UsersService {
 
     async login(loginRequest: LoginRequest): Promise<LoginResponse> {
         const user = await this.userRepository.findOne({username: loginRequest.username});
-        if (await compare(loginRequest.password, user.password)) {
+
+        if (user && await compare(loginRequest.password, user.password)) {
             const payload: JwtPayload = { sub: user.id.toString() };
             return new LoginResponse({
                 accessToken:  this.jwtService.sign(payload),
